@@ -6,7 +6,12 @@ import Outgoing from '../components/Outgoing'
 import Announcements from '../components/Announcements'
 import Form from '../components/Form'
 
+// import ProfileList from '../components/ProfileList';
+
+// import { QUERY_PROFILES } from '../utils/queries';
+
 const Home = () => {
+ 
     // I've commented out what was on the original...
     // const { loading, data } = useQuery(QUERY_PROFILES);
     // const profiles = data?.profiles || [];
