@@ -8,7 +8,7 @@ const SubjectList = ({ subject, isLoggedInUser = false }) => {
   
 
   if (!subject.length) {
-    return <h3>No Skills Yet</h3>;
+    return <h3>No Subjects Yet</h3>;
   }
 
   return (

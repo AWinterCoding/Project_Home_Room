@@ -19,7 +19,7 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
+  subjects: [
     {
       type: String,
       trim: true,

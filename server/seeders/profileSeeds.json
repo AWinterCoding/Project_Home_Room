@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Nisha",
+    "email": "nisha@homeroom.com",
+    "password": "password01",
+    "subjects": ["Math", "Science", "Social-Activity"]
+  },
+  {
+    "name": "Alexandera",
+    "email": "alex@homeroom.com",
+    "password": "password02",
+    "subjects": ["Physics", "Chemistry", "Botany"]
+  },
+  {
+    "name": "Kyler",
+    "email": "kyler@homeroom.com",
+    "password": "password03",
+    "subjects": ["Geo-political", "World Economics", "Zoology"]
+  },
+  {
+    "name": "Janica",
+    "email": "janica@homeroom.com",
+    "password": "password04",
+    "subjects": ["Medical", "Science", "Forensic"]
+  }
+]
