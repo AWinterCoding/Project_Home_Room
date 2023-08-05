@@ -10,10 +10,13 @@ export default function Incoming() {
 
 <table className="Incoming">
   <thead>
-      <th>Student</th>
+    <tr>
+    <th>Student</th>
       <th>Status</th>
       <th>Reason</th>
       <th>Teacher</th>
+    </tr>
+      
   </thead>
   <tbody>
       <tr>

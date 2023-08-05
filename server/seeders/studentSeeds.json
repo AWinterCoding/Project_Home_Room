@@ -1,0 +1,103 @@
+ [
+      {
+        "name": "John Smith",
+        "grade": 9,
+        "teacher": "Johnson"
+      },
+      {
+        "name": "Emma Johnson",
+        "grade": 10,
+        "teacher": "Williams"
+      },
+      {
+        "name": "Michael Lee",
+        "grade": 11,
+        "teacher": "Davis"
+      },
+      {
+        "name": "Sophia Kim",
+        "grade": 12,
+        "teacher": "Anderson"
+      },
+      {
+        "name": "William Brown",
+        "grade": 9,
+        "teacher": "Thompson"
+      },
+      {
+        "name": "Olivia Martinez",
+        "grade": 10,
+        "teacher": "Rodriguez"
+      },
+      {
+        "name": "Ethan Wilson",
+        "grade": 11,
+        "teacher": "Robinson"
+      },
+      {
+        "name": "Ava Taylor",
+        "grade": 12,
+        "teacher": "Clark"
+      },
+      {
+        "name": "Liam Lewis",
+        "grade": 9,
+        "teacher": "Parker"
+      },
+      {
+        "name": "Isabella Green",
+        "grade": 10,
+        "teacher": "Moore"
+      },
+      {
+        "name": "Reese Daniels",
+        "grade": 9,
+        "teacher": "Johnson"
+      },
+      {
+        "name": "Riley Johnson",
+        "grade": 10,
+        "teacher": "Williams"
+      },
+      {
+        "name": "Michelle Lee",
+        "grade": 11,
+        "teacher": "Davis"
+      },
+      {
+        "name": "Magnet Ronson",
+        "grade": 12,
+        "teacher": "Anderson"
+      },
+      {
+        "name": "Ivan Sandberg",
+        "grade": 9,
+        "teacher": "Thompson"
+      },
+      {
+        "name": "Birdie Shumway",
+        "grade": 10,
+        "teacher": "Rodriguez"
+      },
+      {
+        "name": "Carlos Powell",
+        "grade": 11,
+        "teacher": "Robinson"
+      },
+      {
+        "name": "Revel Doyle",
+        "grade": 12,
+        "teacher": "Clark"
+      },
+      {
+        "name": "Jackie Allen",
+        "grade": 9,
+        "teacher": "Parker"
+      },
+      {
+        "name": "Angel Green",
+        "grade": 10,
+        "teacher": "Moore"
+      }
+    ]
+  
