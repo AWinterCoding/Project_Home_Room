@@ -1,6 +1,6 @@
 import React from 'react';
 // Here I will import all the components that make up the home page:
-import Nav from '../components/Nav'
+
 import Incoming from '../components/Incoming'
 import Outgoing from '../components/Outgoing'
 import Announcements from '../components/Announcements'
@@ -20,8 +20,7 @@ const Home = () => {
         // These are wrapper tags required by React if you want to render many HTML elements in a row
         <>
 
-    {/* This is rendering the navbar */}
-        <Nav/>
+  
     
     {/* This is the main div */}
     <div className="main">
