@@ -9,17 +9,17 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+    <header className="panel is-primary">
+      <div className="container flex-column justify-space-between-lg justify-center align-center text-center panel-heading">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          <h1 className="m-0 has-text-centered" style={{ fontSize: '3rem' }}>
             Welcome to Homeroom
           </h1>
         </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
+        <p className="m-0 has-text-centered" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
         Schedule a Homeroom
         </p>
-        <div>
+        <div class="has-text-centered">
           {Auth.loggedIn() ? (
             <>
               <Link className="btn btn-lg btn-primary m-2" to="/me">

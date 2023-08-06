@@ -58,8 +58,9 @@ profileSchema.post('save', async function (doc, next) {
   } else {
     next();
   }
+  console.log('teacher created');
 });
-console.log('teacher created');
+
 // end of that change 8/5
 
 const Profile = model('Profile', profileSchema);
