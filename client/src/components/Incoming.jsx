@@ -25,10 +25,10 @@ export default function Incoming() {
             </tr>
           </thead>
           <tbody>
-             {/* React allows and encourages you to write JSX in the components themselves  */}
-//             {/* So this is where we are appending students into the incoming table */}
-//             {/* This needs to be changed to pull in actual students requested for today's date */}
-//             {/* This can be done once we have some student seeds linked to teachers */}
+        {/* React allows and encourages you to write JSX in the components themselves  */}
+         {/* So this is where we are appending students into the incoming table */}
+          {/* This needs to be changed to pull in actual students requested for today's date */}
+          {/* This can be done once we have some student seeds linked to teachers */}
             {incomingStudents.map((student, index) => (
               <tr key={index}>
                 <td>{student.name}</td>
