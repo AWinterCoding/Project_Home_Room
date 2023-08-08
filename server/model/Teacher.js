@@ -14,6 +14,6 @@ const teacherSchema = new Schema(
     requestedStudents:[studentSchema]
 }
 );
-const Teacher = model('teacher', teacherSchema);
+const Teacher = model('Teacher', teacherSchema);
 
 module.exports = {teacherSchema, Teacher};
