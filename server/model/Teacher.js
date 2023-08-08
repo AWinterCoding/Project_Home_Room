@@ -1,4 +1,4 @@
-const {Schema, Types, SchemaType} = require('mongoose');
+const {Schema, Types, SchemaType, model} = require('mongoose');
 const { studentSchema } = require('./Student');
 
 const teacherSchema = new Schema(
@@ -20,6 +20,6 @@ classRoster: [{
     ref: 'Student',
 }]
 });
-const Teacher = model('teacher', teacherSchema);
+const Teacher = model('Teacher', teacherSchema);
 
-module.exports = {teacherSchema, Teacher};
+module.exports = Teacher;
