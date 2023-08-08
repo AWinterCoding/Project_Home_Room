@@ -15,8 +15,9 @@ const incomingStudents = [
 export default function Incoming() {
   return (
     <>
-      <div className="Incoming">
-        <h3 className="Incoming title is-3">Incoming</h3>
+    <section className='container'>
+      <div className="flex-row">
+        <h3 className="section-title">Incoming</h3>
         <table className="Incoming table is-narrow is-hoverable">
           <thead>
             <tr>
@@ -42,6 +43,7 @@ export default function Incoming() {
           </tbody>
         </table>
       </div>
+      </section>
     </>
   );
 }
