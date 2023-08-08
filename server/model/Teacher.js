@@ -11,9 +11,15 @@ const teacherSchema = new Schema(
         type: String,
         required: true,
     },
-    requestedStudents:[studentSchema]
-}
-);
+    requestedStudents:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Student'
+}],
+classRoster: [{
+    type: Schema.Types.ObjectId, 
+    ref: 'Student',
+}]
+});
 const Teacher = model('teacher', teacherSchema);
 
 module.exports = {teacherSchema, Teacher};
