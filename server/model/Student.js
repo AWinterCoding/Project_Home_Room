@@ -13,7 +13,9 @@ const studentSchema = new Schema(
         required: true,
     },
     //I am testing to see if the one to many relationship will hold the homeroom teacher like this.
-    homeroomTeacher: [teacherSchema],
+    homeroomTeacher: {
+        type: Schema.Types.ObjectId,
+        ref: 'Teacher'},
     onTheWay: {
         type: Boolean,
         default : false,

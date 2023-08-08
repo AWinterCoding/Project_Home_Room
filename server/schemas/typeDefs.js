@@ -13,6 +13,22 @@ const typeDefs = gql`
     token: ID!
     profile: Profile
   }
+  
+  type Student{
+    _id: ID
+    studentName: String
+    homroomTeacher: Teacher
+    onTheWay: Boolean
+    arrived: Boolean
+    requested: Boolean
+  }
+
+  type Teacher{
+    _id: ID
+    teacherName: String
+    requestedStudents: [Student]
+    classRoster: [Student]
+  }
 
   type Query {
     profiles: [Profile]!
@@ -30,6 +46,7 @@ const typeDefs = gql`
     removeProfile: Profile
     removeSubject(subject: String!): Profile
     
+
   }
 `;
 

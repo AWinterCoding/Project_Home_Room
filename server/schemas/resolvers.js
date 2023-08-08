@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../model');
+const { Profile, Student, Teacher } = require('../model');
 const { signToken } = require('../util/auth');
 
 const resolvers = {
@@ -17,6 +17,15 @@ const resolvers = {
         return Profile.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    students: async() => {
+      return Student.find();
+    },
+    student: async(studentID) =>{
+      return Student.findOne({_id: studentID});
+    },
+    teacher: async(teacherID) =>{
+      return Teacher.findOne({_id:teacherID});
     },
   },
 
@@ -80,6 +89,30 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    //method to change the status of whether or not a student is on the way
+    studentOnTheWay: async(student, AwayStatus) => {
+      return Student.findOneAndUpdate(
+        {_id: student},
+        {$set: {onTheWay: AwayStatus}},
+        {new: true}
+      );
+    },
+
+    studentArrived: async(student, ArrivedStatus) => {
+      return Student.findOneAndUpdate(
+        {id: student},
+        {$set: {arrived: ArrivedStatus}},
+        {new: true}
+      );
+    },
+    studentRequested: async(student, requestedStatus) => {
+      return Student.findOneAndUpdate(
+        {id: student},
+        {$set: {requested: requestedStatus}},
+        {new: true}
+      );
+    }
   },
 };
 
