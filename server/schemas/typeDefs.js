@@ -23,8 +23,7 @@ const typeDefs = gql`
 
   type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth 
-   
+    login(email: String!, password: String!): Auth   
 
     addSubject(profileId: ID!, subject: String!): Profile
     removeProfile: Profile
