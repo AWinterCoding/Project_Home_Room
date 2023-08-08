@@ -67,4 +67,4 @@ const Profile = model('Profile', profileSchema);
 
 module.exports = Profile;
 
-module.exports = Profile;
+

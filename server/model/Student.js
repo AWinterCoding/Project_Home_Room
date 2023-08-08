@@ -1,4 +1,4 @@
-const {Schema, Types} = require('mongoose');
+const {Schema, Types, model} = require('mongoose');
 const { string } = require('yargs');
 const teacherSchema = require('./Teacher');
 
