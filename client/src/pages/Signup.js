@@ -63,7 +63,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder=""
                   name="email"
                   type="email"
                   value={formState.email}

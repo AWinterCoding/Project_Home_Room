@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Handle form submission
-router.post('/api/createRequest', (req, res) => {
+router.post('/', (req, res) => {
   // Get the form data from the request body
   const formData = req.body;
 //add own data processing logic here

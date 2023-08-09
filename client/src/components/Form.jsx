@@ -1,9 +1,12 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+//attempting to use graphQL query in utils.mutations
+// import { CREATE_REQUEST } from '../utils/mutations'
+// import { useMutation } from '@apollo/client'
 
 export default function Form() {
-  const [formData, setFormData] = useState({
+  const [formState, setFormState] = useState({
     studentName: '',
     requestDate: '',
     requestReason: '',
@@ -13,8 +16,10 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent form submission from reloading the page
 
+    
+//  const [createRequest, {error, data}] = useMutation(CREATE_REQUEST);
     // Sends the form data to the server using Axios
-    axios.post('/api/createRequest', formData)
+    axios.post('/api/createRequest', formState)
       .then((response) => {
         // Handles the response from the server if needed
         console.log('Form data successfully submitted:', response.data);
@@ -29,10 +34,10 @@ export default function Form() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
+    setFormState({
+      ...formState,
       [name]: value,
-    }));
+    });
   };
 
   return (
@@ -52,7 +57,12 @@ export default function Form() {
           <div className="field">
             <label className="label" htmlFor="studentSearchBar">Search</label>
             <div className="control">
-              <input className="input" id="studentSearchBar" type="text" placeholder="Search for a student" />
+              <input 
+              className="input" 
+              id="studentSearchBar" 
+              type="text" 
+              placeholder="Search for a student" 
+              onChange={handleChange} />
             </div>
           </div>
           <br />
@@ -60,7 +70,12 @@ export default function Form() {
           <div className="field">
             <label className="label" htmlFor="requestDate">Choose a Date:</label>
             <div className="control">
-              <input className="input" type="date" id="requestDate" name="requestDate" />
+              <input 
+              className="input" 
+              type="date" 
+              id="requestDate" 
+              name="requestDate"
+              onChange={handleChange} />
             </div>
           </div>
           <br />
@@ -68,7 +83,13 @@ export default function Form() {
           <div className="field">
             <label className="label" htmlFor="requestReason">Reason</label>
             <div className="control">
-              <input className="input" type="text" id="requestReason" name="requestReason" placeholder="Reason" />
+              <input 
+              className="input" 
+              type="text" 
+              id="requestReason" 
+              name="requestReason" 
+              placeholder="Reason"
+              onChange={handleChange} />
             </div>
           </div>
           <br />

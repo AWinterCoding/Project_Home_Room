@@ -1,103 +1,83 @@
  [
       {
-        "name": "John Smith",
-        "grade": 9,
-        "teacher": "Johnson"
+        "name": "John Smith",       
+        "homeroomTeacherEmail": "alex@homeroom.com"
       },
       {
-        "name": "Emma Johnson",
-        "grade": 10,
-        "teacher": "Williams"
+        "name": "Dennis", 
+        "homeroomTeacherEmail": "janica@homeroom.com"
       },
       {
         "name": "Michael Lee",
-        "grade": 11,
-        "teacher": "Davis"
+        "homeroomTeacherEmail": "kyler@homeroom.com"
       },
       {
         "name": "Sophia Kim",
-        "grade": 12,
-        "teacher": "Anderson"
+        "homeroomTeacherEmail": "nisha@homeroom.com"
       },
       {
         "name": "William Brown",
-        "grade": 9,
-        "teacher": "Thompson"
+        "homeroomTeacherEmail": "alex@homeroom.com"
       },
       {
         "name": "Olivia Martinez",
-        "grade": 10,
-        "teacher": "Rodriguez"
+        "homeroomTeacherEmail": "janica@homeroom.com"
       },
       {
         "name": "Ethan Wilson",
-        "grade": 11,
-        "teacher": "Robinson"
+        "homeroomTeacherEmail": "kyler@homeroom.com"
       },
       {
         "name": "Ava Taylor",
-        "grade": 12,
-        "teacher": "Clark"
+        "homeroomTeacherEmail": "nisha@homeroom.com"
       },
       {
         "name": "Liam Lewis",
-        "grade": 9,
-        "teacher": "Parker"
+        "homeroomTeacherEmail": "alex@homeroom.com"
       },
       {
         "name": "Isabella Green",
-        "grade": 10,
-        "teacher": "Moore"
+        "homeroomTeacherEmail": "janica@homeroom.com"
       },
       {
         "name": "Reese Daniels",
-        "grade": 9,
-        "teacher": "Johnson"
+        "homeroomTeacherEmail": "nisha@homeroom.com"
       },
       {
         "name": "Riley Johnson",
-        "grade": 10,
-        "teacher": "Williams"
+        "homeroomTeacherEmail": "kyler@homeroom.com"
       },
       {
         "name": "Michelle Lee",
-        "grade": 11,
-        "teacher": "Davis"
+        "homeroomTeacherEmail": "alex@homeroom.com"
       },
       {
         "name": "Magnet Ronson",
-        "grade": 12,
-        "teacher": "Anderson"
+        "homeroomTeacherEmail": "janica@homeroom.com"
       },
       {
         "name": "Ivan Sandberg",
-        "grade": 9,
-        "teacher": "Thompson"
+        "homeroomTeacherEmail": "kyler@homeroom.com"
       },
       {
         "name": "Birdie Shumway",
-        "grade": 10,
-        "teacher": "Rodriguez"
+        "homeroomTeacherEmail": "nisha@homeroom.com"
       },
       {
         "name": "Carlos Powell",
-        "grade": 11,
-        "teacher": "Robinson"
+        "homeroomTeacherEmail": "alex@homeroom.com"
       },
       {
         "name": "Revel Doyle",
-        "grade": 12,
-        "teacher": "Clark"
+        "homeroomTeacherEmail": "janica@homeroom.com"
       },
       {
         "name": "Jackie Allen",
-        "grade": 9,
-        "teacher": "Parker"
+        "homeroomTeacherEmail": "kyler@homeroom.com"
       },
       {
         "name": "Angel Green",
-        "grade": 10,
-        "teacher": "Moore"
+        "homeroomTeacherEmail": "nisha@homeroom.com"
       }
     ]
   
