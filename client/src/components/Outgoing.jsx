@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Outgoing.css';
-import { Card, CardHeader, CardBody, CardFooter, Text } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, CardFooter, Text, Heading } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import {
   Table,
@@ -13,6 +13,7 @@ import {
   TableCaption,
   TableContainer,
 } from '@chakra-ui/react';
+import { Divider } from '@chakra-ui/react';
 // this is just testing whether  the JS in the function below is working
 const outgoingStudents = [
   { name: 'Abby', status: true, reason: 'Math help', teacher: 'Teacher1' },
@@ -30,7 +31,8 @@ export default function Outgoing() {
     <>
 
       <Card>
-        <CardHeader>Outgoing</CardHeader>
+      <CardHeader> <Heading size='md'>Outgoing</Heading></CardHeader>
+        <Divider />
         <CardBody>
 
           <TableContainer>
@@ -38,10 +40,10 @@ export default function Outgoing() {
               <TableCaption>Outgoing to other teachers</TableCaption>
               <Thead>
                 <Tr>
-                  <Th>Student</Th>
-                  <Th>Status</Th>
-                  <Th>Reason</Th>
-                  <Th>Teacher Name</Th>
+                  <Th fontSize={15}>Student</Th>
+                  <Th fontSize={15}>Status</Th>
+                  <Th fontSize={15}>Reason</Th>
+                  <Th fontSize={15}>Teacher Name</Th>
                 </Tr>
               </Thead>
               <Tbody>

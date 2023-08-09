@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Card, CardHeader, CardBody, CardFooter, Text, Input, Button, Center, IconButton } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, CardFooter, Text, Input, Button, Center, IconButton, Heading } from '@chakra-ui/react';
 import { Stack, HStack, VStack, StackDivider } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 import { SimpleGrid, GridItem } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react';
 import {
   FormControl,
   FormLabel,
@@ -51,10 +52,11 @@ export default function Form() {
   return (
     <>
       <Card>
-        <CardHeader>Schedule a HomeRoom</CardHeader>
+      <CardHeader> <Heading size='md'>Schedule a Homeroom</Heading></CardHeader>
+        <Divider />
         <CardBody>
-
-          <SimpleGrid column={3} columnGap={2} rowGap={3} w={'full'}>
+        
+          <SimpleGrid column={3} columnGap={2} rowGap={4} w={'full'}>
             <FormControl isInvalid={isError} onSubmit={handleSubmit}>
               <GridItem colSpan={1}>
                 <FormLabel className='mt-4'>Search: </FormLabel>
@@ -78,13 +80,14 @@ export default function Form() {
                 <time dateTime="2023-08-09">11:09 PM - 1 Jan 2016</time>
 
               </GridItem>
-              <GridItem>
+              <GridItem colSpan={3} >
                 <Center>
                   <Button
                     loadingText='Submitting'
                     colorScheme='teal'
                     variant='outline'
                     onClick={handleSubmit} method="POST"
+
                   >
                     Submit
                   </Button>
@@ -93,7 +96,9 @@ export default function Form() {
             </FormControl>
           </SimpleGrid>
 
-
+<CardFooter>
+  
+</CardFooter>
 
 
         </CardBody>
