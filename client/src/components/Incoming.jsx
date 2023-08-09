@@ -1,13 +1,25 @@
 import React from 'react';
-import '../styles/Incoming.css';
-
+// import '../styles/Incoming.css';
+import { Card, CardHeader, CardBody, CardFooter, Text } from '@chakra-ui/react';
+import { Button, ButtonGroup } from '@chakra-ui/react';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react';
 // this is just testing whether  the JS in the function below is working
 const incomingStudents = [
-  { name: 'Shelly', status: 'OUT/IN', reason: 'math help', teacher: 'Snape' },
-  { name: 'Marcus', status: 'OUT/IN', reason: 'science help', teacher: 'McGonagall' },
-  { name: 'Michael', status: 'OUT/IN', reason: 'history help', teacher: 'Dumbledore' },
-  { name: 'Russell', status: 'OUT/IN', reason: 'extracredit', teacher: 'Johnson'},
-  {name: 'Jenny', status: 'OUT/IN', reason: 'retake test', teacher: 'Childers'}
+  { name: 'Shelly', status: false, reason: 'Math help', teacher: 'Snape' },
+  { name: 'Marcus', status: true, reason: 'Science help', teacher: 'McGonagall' },
+  { name: 'Michael', status: true, reason: 'History help', teacher: 'Dumbledore' },
+  { name: 'Russell', status: false, reason: 'Extracredit', teacher: 'Johnson' },
+  { name: 'Jenny', status: true, reason: 'Retake test', teacher: 'Childers' }
 ]
 
 
@@ -15,147 +27,53 @@ const incomingStudents = [
 export default function Incoming() {
   return (
     <>
-    <section className='container'>
-      <div className="flex-row">
-        <h3 className="section-title">Incoming</h3>
-        <table className="Incoming table is-narrow is-hoverable">
-          <thead>
-            <tr>
-              <th>Student</th>
-              <th>Status</th>
-              <th>Reason</th>
-              <th>Teacher</th>
-            </tr>
-          </thead>
-          <tbody>
-        {/* React allows and encourages you to write JSX in the components themselves  */}
-         {/* So this is where we are appending students into the incoming table */}
-          {/* This needs to be changed to pull in actual students requested for today's date */}
-          {/* This can be done once we have some student seeds linked to teachers */}
-            {incomingStudents.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-                <td>{student.status}</td>
-                <td>{student.reason}</td>
-                <td>{student.teacher}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      </section>
+
+      <Card>
+        <CardHeader>Incoming</CardHeader>
+        <CardBody>
+
+          <TableContainer>
+            <Table variant='striped' colorScheme='teal'>
+              <TableCaption>Incoming for this teacher</TableCaption>
+              <Thead>
+                <Tr>
+                  <Th>Student</Th>
+                  <Th>Status</Th>
+                  <Th>Reason</Th>
+                  <Th>Teacher Name</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {incomingStudents.map((student, index) => (
+                  <Tr key={index}>
+                    <Td>{student.name}</Td>
+
+
+                    <Td>
+                      {student.status ? <Button size='sm'
+                        height='30px'
+                        width='80px'
+                        border='1px' colorScheme='green'> IN</Button> : <Button  size='sm'
+                        height='30px'
+                        width='80px'
+                        border='1px' colorScheme='red'>OUT</Button>}
+
+                    </Td>
+                    <Td>{student.reason}</Td>
+                    <Td>{student.teacher}</Td>
+                  </Tr>
+                ))}
+              </Tbody>
+
+            </Table>
+          </TableContainer>
+
+        </CardBody>
+      </Card>
+
+
     </>
   );
 }
 
 
-// export default function Incoming() {
-//   return (
-//     <>
-//       <div className="Incoming">
-//         <h3 className="Incoming">Incoming</h3>
-//         <table className="Incoming">
-//           <thead>
-//             <tr>
-//               <th>Student</th>
-//               <th>Status</th>
-//               <th>Reason</th>
-//               <th>Teacher</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//         {/* React allows and encourages you to write JSX in the components themselves  */}
-//          {/* So this is where we are appending students into the incoming table */}
-//           {/* This needs to be changed to pull in actual students requested for today's date */}
-//           {/* This can be done once we have some student seeds linked to teachers */}
-//             {incomingStudents.map((student, index) => (
-//               <tr key={index}>
-//                 <td>{student.name}</td>
-//                 <td>{student.status}</td>
-//                 <td>{student.reason}</td>
-//                 <td>{student.teacher}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default function Incoming() {
-//   return (
-//     <>
-//       <div className="Incoming">
-//         <h3 className="Incoming">Incoming</h3>
-//         <table className="Incoming">
-//           <thead>
-//             <tr>
-//               <th>Student</th>
-//               <th>Status</th>
-//               <th>Reason</th>
-//               <th>Teacher</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {/* React allows and encourages you to write JSX in the components themselves  */}
-//             {/* So this is where we are appending students into the incoming table */}
-//             {/* This needs to be changed to pull in actual students requested for today's date */}
-//             {/* This can be done once we have some student seeds linked to teachers */}
-//             {incomingStudents.map((student, index) => (
-//               <tr key={index}>
-//                 <td>{student}</td>
-//                 <td></td>
-//                 <td>math help</td>
-//                 <td>Snape</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-//     </>
-//   );
-// }
-
-
-
-// import React from 'react'
-// import '../styles/Incoming.css'
-// const incomingStudents = [Shelly, Marcus, Michael, Russell, Jenny, Jack];
-// export default function Incoming() {
-//   return (
-//     <>
-//     <div className="Incoming">
-
-//     <h3 className="Incoming">Incoming</h3>
-
-// <table className="Incoming">
-//   <thead>
-//     <tr>
-//     <th>Student</th>
-//       <th>Status</th>
-//       <th>Reason</th>
-//       <th>Teacher</th>
-//     </tr>
-      
-//   </thead>
-//   <tbody>
-//       <tr>
-//           <td>Placeholder</td> 
-//           <td>OUT/IN</td> 
-//           <td>math help</td> 
-//           <td>Snape</td> 
-//       </tr>
-//   </tbody>
-// </table>
-
-
-
-
-//     </div>
-     
-    
-//     </>
-    
-//   )
-// }
