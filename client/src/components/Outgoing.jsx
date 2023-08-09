@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Outgoing.css';
 import { Card, CardHeader, CardBody, CardFooter, Text, Heading } from '@chakra-ui/react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import {
