@@ -54,7 +54,7 @@ export default function Form() {
             <FormLabel className='mt-4'>Search</FormLabel>
             <Input placeholder='Search Student Name' />
 
-            <FormLabel className='mt-4'>Choose a Date</FormLabel>
+            <FormLabel className='mt-4'>Choose a Datem & Time</FormLabel>
             <input className="input" type="datetime-local" id="requestDate" name="requestDate" />
             <FormLabel className='mt-4'>Reason</FormLabel>
             <Input placeholder='Any Reason e.g: Cannot Make it' />
