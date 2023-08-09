@@ -1,6 +1,7 @@
 import React from 'react';
 // Here I will import all the components that make up the home page:
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react'
 import Incoming from '../components/Incoming'
 import Outgoing from '../components/Outgoing'
 import Announcements from '../components/Announcements'
@@ -25,18 +26,23 @@ const Home = () => {
             <Tab><BellIcon w={6} h={6} color="red.500" /><span className='ml-2'>Announcements</span></Tab>
           </TabList>
           <TabPanels>
+
             <TabPanel>
-              <p><Incoming /></p>
-            </TabPanel>
+              <p><Incoming /></p>              
+            </TabPanel> 
+                   
             <TabPanel>
               <p><Outgoing /></p>
             </TabPanel>
+           
             <TabPanel>
               <p><Form /></p>
             </TabPanel>
+          
             <TabPanel>
               <p><Announcements /></p>
             </TabPanel>
+            
           </TabPanels>
         </Tabs>
       </div>

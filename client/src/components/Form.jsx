@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Card, CardHeader, CardBody, CardFooter, Text, Input, Button, Center } from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, CardFooter, Text, Input, Button, Center, IconButton, Heading } from '@chakra-ui/react';
+import { Stack, HStack, VStack, StackDivider } from '@chakra-ui/react'
+import { SearchIcon } from '@chakra-ui/icons'
+import { SimpleGrid, GridItem } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react';
 import {
   FormControl,
   FormLabel,
@@ -48,32 +52,55 @@ export default function Form() {
   return (
     <>
       <Card>
-        <CardHeader>Schedule a HomeRoom</CardHeader>
+      <CardHeader> <Heading size='md'>Schedule a Homeroom</Heading></CardHeader>
+        <Divider />
         <CardBody>
-          <FormControl isInvalid={isError} onSubmit={handleSubmit}>
-            <FormLabel className='mt-4'>Search</FormLabel>
-            <Input placeholder='Search Student Name' />
+        
+          <SimpleGrid column={3} columnGap={2} rowGap={4} w={'full'}>
+            <FormControl isInvalid={isError} onSubmit={handleSubmit}>
+              <GridItem colSpan={1}>
+                <FormLabel className='mt-4'>Search: </FormLabel>
+                <HStack><Input placeholder='Search Student Name' />
+                  <IconButton
+                    colorScheme='blue'
+                    aria-label='Search Students'
+                    icon={<SearchIcon />}
+                  /></HStack>
+              </GridItem>
+              <GridItem colSpan={3} >  <FormLabel className='mt-4'>Date & Time: </FormLabel>
+                <input className="input" type="datetime-local" id="requestDate" name="requestDate" />
+              </GridItem>
+              <GridItem colSpan={3} >
+                <FormLabel className='mt-4'>Reason:</FormLabel>
+                <Input placeholder='Any Reason e.g: Cannot Make it' />
+              </GridItem>
+              <GridItem colSpan={3} >
 
-            <FormLabel className='mt-4'>Choose a Date & Time</FormLabel>
-            <input className="input" type="datetime-local" id="requestDate" name="requestDate" />
-            <FormLabel className='mt-4'>Reason</FormLabel>
-            <Input placeholder='Any Reason e.g: Cannot Make it' />
-            <div className='mt-4'>
-              <FormLabel className='mt-4'>Selected Date</FormLabel>
-              <time dateTime="2023-08-09">11:09 PM - 1 Jan 2016</time>
-            </div>
-          </FormControl>
+                <FormLabel className='mt-4'>Selected Date:</FormLabel>
+                <time dateTime="2023-08-09">11:09 PM - 1 Jan 2016</time>
 
-          <Center>
-            <Button
-              loadingText='Submitting'
-              colorScheme='teal'
-              variant='outline'
-              onClick={handleSubmit} method="POST"
-            >
-              Submit
-            </Button>
-            </Center>
+              </GridItem>
+              <GridItem colSpan={3} >
+                <Center>
+                  <Button
+                    loadingText='Submitting'
+                    colorScheme='teal'
+                    variant='outline'
+                    onClick={handleSubmit} method="POST"
+
+                  >
+                    Submit
+                  </Button>
+                </Center>
+              </GridItem>
+            </FormControl>
+          </SimpleGrid>
+
+<CardFooter>
+  
+</CardFooter>
+
+
         </CardBody>
       </Card>
 
