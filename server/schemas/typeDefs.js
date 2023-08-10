@@ -14,6 +14,14 @@ const typeDefs = gql`
     profile: Profile
   }
 
+  type Student {
+    studentID: ID!
+    studentName: String
+    onTheWay: Boolean
+    arrived: Boolean,
+    requested: Boolean
+  }
+
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
@@ -28,6 +36,8 @@ const typeDefs = gql`
     addSubject(profileId: ID!, subject: String!): Profile
     removeProfile: Profile
     removeSubject(subject: String!): Profile
+
+    studentGoing(studentID: ID!, leavingStatus: Boolean!): Student
     
   }
 `;
