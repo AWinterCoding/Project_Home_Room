@@ -19,7 +19,7 @@ const Header = () => {
         <p className="m-0 has-text-centered" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
         Schedule a Homeroom
         </p>
-        <div class="has-text-centered">
+        <div className="has-text-centered">
           {Auth.loggedIn() ? (
             <>
               <Link className="btn btn-lg btn-primary m-2" to="/me">
