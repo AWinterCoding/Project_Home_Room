@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Profile } = require('../model');
 const { signToken } = require('../util/auth');
+const Student = require('../model/Student');
 
 const resolvers = {
   Query: {
@@ -79,6 +80,15 @@ const resolvers = {
         );
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    studentGoing: async(parent, {subject}, context) => {
+      if(context.onTheWay){
+        return Student.findOneAndUpdate(
+          { _id: context.studentID },
+          {$set: {onTheWay: leavingStatus}},
+          {new: true}
+        );
+      }
     },
   },
 };
