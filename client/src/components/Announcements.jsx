@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Text } from '@chakra-ui/react';
+import { Card,  CardBody } from '@chakra-ui/react';
 import {
   Alert,
   AlertIcon,

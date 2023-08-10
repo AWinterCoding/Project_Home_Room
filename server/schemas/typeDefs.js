@@ -19,7 +19,10 @@ const typeDefs = gql`
     studentName: String
     onTheWay: Boolean
     arrived: Boolean,
-    requested: Boolean
+    requested: Boolean,
+    reason: String
+    teacherName: String
+    subjects: [Subject]
   }
 
   type Query {
@@ -27,6 +30,9 @@ const typeDefs = gql`
     profile(profileId: ID!): Profile
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: Profile
+    students: [Student]
+    teachers: [Teacher]
+    subjects: [Subject]
   }
 
   type Mutation {
@@ -38,8 +44,28 @@ const typeDefs = gql`
     removeSubject(subject: String!): Profile
 
     studentGoing(studentID: ID!, leavingStatus: Boolean!): Student
-    
+    createStudent(name: String!): Student
+    createTeacher(name: String!): Teacher
+    createSubject(name: String!): Subject
+    assignStudentToSubject(studentId: ID!, subjectId: ID!): Student
+    assignTeacherToSubject(teacherId: ID!, subjectId: ID!): Teacher
   }
+
+  
+  type Teacher {
+    id: ID!
+    name: String!
+    subjects: [Subject]
+  }
+
+  type Subject {
+    id: ID!
+    name: String!
+    students: [Student]
+    teachers: [Teacher]
+  }
+
+ 
 `;
 
 module.exports = typeDefs;

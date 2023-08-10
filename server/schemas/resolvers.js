@@ -2,6 +2,8 @@ const { AuthenticationError } = require('apollo-server-express');
 const { Profile } = require('../model');
 const { signToken } = require('../util/auth');
 const Student = require('../model/Student');
+const Teacher = require('../model/Teacher');
+const Subject = require('../model/Subject');
 
 const resolvers = {
   Query: {
@@ -19,6 +21,9 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    students: async () => Student.find(),
+    teachers: async () => Teacher.find(),
+    subjects: async () => Subject.find(),
   },
 
   Mutation: {
@@ -81,15 +86,53 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    studentGoing: async(parent, {subject}, context) => {
-      if(context.onTheWay){
+    studentGoing: async (parent, { subject }, context) => {
+      if (context.onTheWay) {
         return Student.findOneAndUpdate(
           { _id: context.studentID },
-          {$set: {onTheWay: leavingStatus}},
-          {new: true}
+          { $set: { onTheWay: leavingStatus } },
+          { new: true }
         );
       }
     },
+    createStudent: (_, { name }) => Student.create({ name }),
+    createTeacher: (_, { name }) => Teacher.create({ name }),
+    createSubject: (_, { name }) => Subject.create({ name }),
+    assignStudentToSubject: async (_, { studentId, subjectId }) => {
+      const student = await Student.findById(studentId);
+      const subject = await Subject.findById(subjectId);
+
+      if (student && subject) {
+        student.subjects.push(subject);
+        await student.save();
+      }
+
+      return student;
+    },
+    assignTeacherToSubject: async (_, { teacherId, subjectId }) => {
+      const teacher = await Teacher.findById(teacherId);
+      const subject = await Subject.findById(subjectId);
+
+      if (teacher && subject) {
+        teacher.subjects.push(subject);
+        await teacher.save();
+        subject.teachers.push(teacher);
+        await subject.save();
+      }
+
+      return teacher;
+    }
+  },
+
+  Student: {
+    subjects: (student) => Subject.find({ _id: { $in: student.subjects } }),
+  },
+  Teacher: {
+    subjects: (teacher) => Subject.find({ _id: { $in: teacher.subjects } }),
+  },
+  Subject: {
+    students: (subject) => Student.find({ subjects: subject._id }),
+    teachers: (subject) => Teacher.find({ subjects: subject._id }),
   },
 };
 
