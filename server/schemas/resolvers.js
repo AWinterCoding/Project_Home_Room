@@ -24,6 +24,12 @@ const resolvers = {
     students: async () => Student.find(),
     teachers: async () => Teacher.find(),
     subjects: async () => Subject.find(),
+    searchStudents: async (_, { query }) => {
+      const students = await Student.find({ studentName: { $regex: query, $options: 'i' } });
+      return students;
+    }
+
+    
   },
 
   Mutation: {

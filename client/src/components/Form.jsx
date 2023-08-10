@@ -11,6 +11,7 @@ import {
   FormLabel,
 
 } from '@chakra-ui/react';
+import StudentSearch from './StudentSearch';
 export default function Form() {
   const [formData, setFormData] = useState({
     studentName: '',
@@ -50,6 +51,7 @@ export default function Form() {
   const isError = input === ''
   return (
     <>
+   
       <Card>
       <CardHeader> <Heading size='md'>Schedule a Homeroom</Heading></CardHeader>
         <Divider />
@@ -57,15 +59,7 @@ export default function Form() {
         
           <SimpleGrid column={3} columnGap={2} rowGap={4} w={'full'}>
             <FormControl isInvalid={isError} onSubmit={handleSubmit}>
-              <GridItem colSpan={1}>
-                <FormLabel className='mt-4'>Search: </FormLabel>
-                <HStack><Input placeholder='Search Student Name' />
-                  <IconButton
-                    colorScheme='blue'
-                    aria-label='Search Students'
-                    icon={<SearchIcon />}
-                  /></HStack>
-              </GridItem>
+             <StudentSearch/>
               <GridItem colSpan={3} >  <FormLabel className='mt-4'>Date & Time: </FormLabel>
                 <input className="input" type="datetime-local" id="requestDate" name="requestDate" />
               </GridItem>
