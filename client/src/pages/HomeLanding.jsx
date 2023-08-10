@@ -1,12 +1,11 @@
 import React from 'react';
 // Here I will import all the components that make up the home page:
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
-import { Divider } from '@chakra-ui/react'
-import Incoming from '../components/Incoming'
-import Outgoing from '../components/Outgoing'
-import Announcements from '../components/Announcements'
-import Form from '../components/Form'
-import { ArrowRightIcon, ArrowLeftIcon, CalendarIcon, BellIcon } from '@chakra-ui/icons'
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import Incoming from '../components/Incoming';
+import Outgoing from '../components/Outgoing';
+import Announcements from '../components/Announcements';
+import Form from '../components/Form';
+import { ArrowRightIcon, ArrowLeftIcon, CalendarIcon, BellIcon } from '@chakra-ui/icons';
 import Auth from '../utils/auth';
 
 
