@@ -33,6 +33,7 @@ const typeDefs = gql`
     students: [Student]
     teachers: [Teacher]
     subjects: [Subject]
+    searchStudents(query: String!): [Student]
   }
 
   type Mutation {
