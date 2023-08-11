@@ -25,7 +25,7 @@ This website could be used throughout all schools as a simple yet effective way 
 
 Deployed website can be found at: https://project-homeroom-89dc042d8908.herokuapp.com/
 <img width="1470" alt="Screenshot 2023-08-10 at 23 10 14" src="https://github.com/AWinterCoding/Project_Home_Room/assets/124640874/ddcdc570-a62e-4fd6-9a31-f97463932586">
-<img width="1920" alt="Screenshot 2023-08-10 at 23 10 49 (2)" src="https://github.com/AWinterCoding/Project_Home_Room/assets/124640874/5e845c93-1432-4e96-b6d4-57afca0fd144">
+<img width="1470" alt="Screenshot 2023-08-10 at 23 11 35" src="https://github.com/AWinterCoding/Project_Home_Room/assets/124640874/49cba3a1-9d0a-4328-9981-a46200cb0362">
 
 
 
