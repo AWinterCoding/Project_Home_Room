@@ -12,6 +12,7 @@ import {
 
 } from '@chakra-ui/react';
 import StudentSearch from './StudentSearch';
+import { Link } from 'react-router-dom';
 export default function Form() {
   const [formData, setFormData] = useState({
     studentName: '',
@@ -21,20 +22,20 @@ export default function Form() {
   });
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent form submission from reloading the page
+    // event.preventDefault(); // Prevent form submission from reloading the page
 
-    // Sends the form data to the server using Axios
-    axios.post('/api/createRequest', formData)
-      .then((response) => {
-        // Handles the response from the server if needed
-        console.log('Form data successfully submitted:', response.data);
-        // Performs any necessary actions, such as showing a success message or updating component state.
-      })
-      .catch((error) => {
-        // Handles errors if any
-        console.error('Error submitting form data:', error);
-        // Performs error handling, such as showing an error message or updating component state.
-      });
+    // // Sends the form data to the server using Axios
+    // axios.post('/api/createRequest', formData)
+    //   .then((response) => {
+    //     // Handles the response from the server if needed
+    //     console.log('Form data successfully submitted:', response.data);
+    //     // Performs any necessary actions, such as showing a success message or updating component state.
+    //   })
+    //   .catch((error) => {
+    //     // Handles errors if any
+    //     console.error('Error submitting form data:', error);
+    //     // Performs error handling, such as showing an error message or updating component state.
+    //   });
   };
 
   const handleChange = (event) => {
@@ -75,7 +76,7 @@ export default function Form() {
               </GridItem>
               <GridItem colSpan={3} >
                 <Center>
-                  <Button
+                <Link to="/thankyou"> <Button
                     loadingText='Submitting'
                     colorScheme='teal'
                     variant='outline'
@@ -83,7 +84,7 @@ export default function Form() {
 
                   >
                     Submit
-                  </Button>
+                  </Button></Link> 
                 </Center>
               </GridItem>
             </FormControl>

@@ -15,7 +15,7 @@ import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { extendTheme, ChakraProvider } from '@chakra-ui/react'
-
+import Thankyou from './components/Thankyou';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -82,6 +82,7 @@ function App() {
                 path="/profiles/:profileId"
                 element={<Profile />}
               />
+                <Route path="/thankyou" element={<Thankyou/>} />
             </Routes>
           </div>
           <Footer />
