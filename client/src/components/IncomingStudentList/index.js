@@ -28,7 +28,6 @@ const GET_STUDENTS = gql`
 
 const StudentList = () => {
   const { loading, error, data } = useQuery(GET_STUDENTS);
-  <p>{data}</p>
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
