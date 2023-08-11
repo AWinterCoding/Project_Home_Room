@@ -4,8 +4,8 @@
 
 # User Story
 
-AS A USER I want to be able to see where my homeroom students are, why they are there
-SO THAT I can assign students out to different classrooms if needed.
+AS A USER (teacher) I want to be able to see where my homeroom students are, and why they are there
+SO THAT I can assign students out to different classrooms if needed and track attendance.
 
 ## Acceptance Criteria
 
@@ -17,13 +17,16 @@ THEN I can see if they made it to the new home room or the skipped.
 
 ## Description
 
-This website will provide teachers with an easier way to keep track of kids during free periods. They can also see if students are requested by another teacher, comment why they need to be in a certain classroom, and mark if they are still in my class or on the way.
-
+This website will provide teachers with an easier way to keep track of kids during free periods. They can also see if students are requested by another teacher, comment why they need to be in a certain classroom, and mark if they are still in my class or on the way via a toggle button.
+ 
 ## Usage
 
-This website could be used throughout all schools as a simple yet effective way to keep track of students and make sure free period is used for makeup work if needed, also should bring up attendance and accountability.
+This website could be used throughout all schools as a simple yet effective way to keep track of students and make sure free period is used for makeup work if needed, also should bring up attendance and accountability. In order to use, one must make an account. In theory, they would be linked to their homeroom class period and those students would be able to be requested by other teachers. The app as it stands is missing almost all funcionality as the time was limited to troubleshoot the middleware. Many iterations had separate pieces working but, not together. The app needs more work. However, there is successful implementation of React, GraphQL (profile creation), Express, and Node so we will continue to work but hope that we satisfied some basic requirements.
 
-Deployed website can be found at:
+Deployed website can be found at: https://project-homeroom-89dc042d8908.herokuapp.com/
+
+![homepage](/Project_Home_Room/assets/homepage.png)
+![form](/Project_Home_Room/assets/form.png)
 
 ## Credits
 
