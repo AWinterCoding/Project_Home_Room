@@ -23,9 +23,18 @@ This website will provide teachers with an easier way to keep track of kids duri
 
 This website could be used throughout all schools as a simple yet effective way to keep track of students and make sure free period is used for makeup work if needed, also should bring up attendance and accountability. In order to use, one must make an account. In theory, they would be linked to their homeroom class period and those students would be able to be requested by other teachers. The app as it stands is missing almost all funcionality as the time was limited to troubleshoot the middleware. Many iterations had separate pieces working but, not together. The app needs more work. However, there is successful implementation of React, GraphQL (profile creation), Express, and Node so we will continue to work but hope that we satisfied some basic requirements.
 
-Deployed website can be found at: https://project-homeroom-89dc042d8908.herokuapp.com/
-<img width="1470" alt="Screenshot 2023-08-10 at 23 10 14" src="https://github.com/AWinterCoding/Project_Home_Room/assets/124640874/ddcdc570-a62e-4fd6-9a31-f97463932586">
-<img width="1470" alt="Screenshot 2023-08-10 at 23 11 35" src="https://github.com/AWinterCoding/Project_Home_Room/assets/124640874/49cba3a1-9d0a-4328-9981-a46200cb0362">
+Heroku Deployed website can be found at: https://homeroom-app-4000de1bd278.herokuapp.com/
+### Incoming
+![Incoming](./assets/incoming.png)
+
+### Outgoing
+![Outgoing](./assets/outgoing.png)
+
+### Schedule
+![ScheduleRoom](./assets/scheduleroom.png)
+
+### Request Submission
+![Success Submission](./assets/success.png)
 
 
 
